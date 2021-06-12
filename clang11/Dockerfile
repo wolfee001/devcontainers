@@ -8,7 +8,9 @@ RUN sudo apt-get update \
     unzip=6.0-21ubuntu1.1 \
     wget=1.19.4-1ubuntu2.2 \
     gdb=8.1.1-0ubuntu1 \
-    locales=2.27-3ubuntu1.4
+    locales=2.27-3ubuntu1.4 \
+    clang-tidy=1:6.0-41~exp5~ubuntu1 \
+    cppcheck=1.82-1
 
 RUN echo "en_US.UTF-8 UTF-8" | sudo tee -a /etc/locale.gen \
     && sudo locale-gen

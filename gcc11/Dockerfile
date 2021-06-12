@@ -9,7 +9,9 @@ RUN sudo apt-get update \
     wget=1.20.3-1ubuntu1 \
     gdb=10.2-0ubuntu1~20.04~1 \
     clangd=1:10.0-50~exp1 \
-    locales=2.31-0ubuntu9.2
+    locales=2.31-0ubuntu9.2 \
+    clang-tidy=1:10.0-50~exp1 \
+    cppcheck=1.90-4build1
 
 RUN echo "en_US.UTF-8 UTF-8" | sudo tee -a /etc/locale.gen \
     && sudo /sbin/locale-gen
