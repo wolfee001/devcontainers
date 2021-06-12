@@ -1,0 +1,26 @@
+{
+    "name": "${localWorkspaceFolder}",
+    "image": "gcc11",
+    "remoteUser": "conan",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=delegated",
+    "workspaceFolder": "/workspace",
+    "mounts": [
+        "target=/workspace/build,type=volume",
+        "source=devcontainer_gcc_packages,target=/home/conan/.conan,type=volume"
+    ],
+    "postStartCommand": "sudo chown -R conan /workspace/build/",
+    "runArgs": [
+        "--cap-add=SYS_PTRACE",
+        "--security-opt",
+        "seccomp=unconfined"
+    ],
+    "extensions": [
+        "ms-vscode.cpptools",
+        "twxs.cmake",
+        "ms-vscode.cmake-tools",
+        "xaver.clang-format",
+        "hbenl.vscode-test-explorer",
+        "matepek.vscode-catch2-test-adapter",
+        "llvm-vs-code-extensions.vscode-clangd"
+    ]
+}

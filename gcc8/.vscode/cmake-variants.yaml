@@ -1,0 +1,29 @@
+buildType:
+  default: debug
+  choices:
+    debug:
+      short: Debug
+      long: Emit debug information
+      buildType: Debug
+    release:
+      short: Release
+      long: Optimize generated code
+      buildType: Release
+    rel_with_deb_info:
+      short: RelWithDebInfo
+      long: Optimize generated code with debug info
+      buildType: RelWithDebInfo
+
+staticAnalyzers:
+  default: StaticAnalyzersOn
+  choices:
+    sa_on:
+      short: StaticAnalyzersOn
+      long: Turns on static analyzers
+      settings:
+        STATIC_ANALYZERS: yes
+    sa_off:
+      short: StaticAnalyzersOff
+      long: Turns off static analyzers
+      settings:
+        STATIC_ANALYZERS: no
