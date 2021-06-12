@@ -32,7 +32,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Extract Docker metadata for gcc11
-        id: meta
+        id: meta_gcc11
         uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}-gcc11
@@ -45,7 +45,7 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
 
       - name: Extract Docker metadata for clang11
-        id: meta
+        id: meta_clang11
         uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}-clang11
