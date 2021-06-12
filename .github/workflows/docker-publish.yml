@@ -41,8 +41,8 @@ jobs:
         with:
           context: ./gcc11
           push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+          tags: ${{ steps.meta_gcc11.outputs.tags }}
+          labels: ${{ steps.meta_gcc11.outputs.labels }}
 
       - name: Extract Docker metadata for clang11
         id: meta_clang11
@@ -54,6 +54,6 @@ jobs:
         with:
           context: ./clang11
           push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+          tags: ${{ steps.meta_clang11.outputs.tags }}
+          labels: ${{ steps.meta_clang11.outputs.labels }}
 
