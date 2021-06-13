@@ -1,6 +1,7 @@
 {
     "name": "${localWorkspaceFolder}",
     "image": "ghcr.io/wolfee001/devcontainers-gcc11:master",
+    "initializeCommand": "docker pull ghcr.io/wolfee001/devcontainers-gcc11:master",
     "remoteUser": "conan",
     "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=delegated",
     "workspaceFolder": "/workspace",
