@@ -16,4 +16,6 @@ RUN sudo apt-get update \
 RUN echo "en_US.UTF-8 UTF-8" | sudo tee -a /etc/locale.gen \
     && sudo /sbin/locale-gen
 
+RUN sudo ln /usr/bin/clang-tidy-11 /usr/bin/clang-tidy
+
 RUN conan profile new default --detect
